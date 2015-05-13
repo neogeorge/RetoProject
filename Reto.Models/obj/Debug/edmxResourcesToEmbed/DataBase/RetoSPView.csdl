@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RetoModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="RetoSPViewEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_NewBackendGroupId" ReturnType="Collection(String)" />
+    <FunctionImport Name="sp_NewBackendMenuId" ReturnType="Collection(String)" />
+    <FunctionImport Name="sp_NewBackendPageId" ReturnType="Collection(String)" />
+    <FunctionImport Name="sp_NewBackendPermissionId" ReturnType="Collection(String)" />
+    <FunctionImport Name="sp_NewBackendUserId" ReturnType="Collection(String)" />
+    <FunctionImport Name="sp_NewFileId" ReturnType="Collection(String)" />
+    <FunctionImport Name="sp_GetMenuByUser" ReturnType="Collection(RetoModel1.sp_GetMenuByUser_Result2)">
+      <Parameter Name="Account" Mode="In" Type="String" />
+      <Parameter Name="IsEmail" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_GetMenuByUser_Result">
+    <Property Type="String" Name="MenuId" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="ParentId" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+    <Property Type="Byte" Name="Level" Nullable="false" />
+    <Property Type="Byte" Name="LinkType" Nullable="false" />
+    <Property Type="Byte" Name="Sort" Nullable="false" />
+    <Property Type="String" Name="ActionLink" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Controller" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Action" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="UserId" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="PageId" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="sp_GetMenuByUser_Result1">
+    <Property Type="String" Name="MenuId" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="ParentId" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+    <Property Type="Byte" Name="Level" Nullable="false" />
+    <Property Type="Byte" Name="LinkType" Nullable="false" />
+    <Property Type="Byte" Name="Sort" Nullable="false" />
+    <Property Type="String" Name="ActionLink" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Controller" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Action" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="UserId" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="PageId" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="sp_GetMenuByUser_Result2">
+    <Property Type="String" Name="MenuId" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="ParentId" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="PageId" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+    <Property Type="Byte" Name="Level" Nullable="false" />
+    <Property Type="Byte" Name="LinkType" Nullable="false" />
+    <Property Type="Byte" Name="Sort" Nullable="false" />
+    <Property Type="String" Name="ActionLink" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Controller" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Action" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

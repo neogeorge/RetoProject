@@ -1,0 +1,75 @@
+﻿@using Reto.Class
+
+@{
+    
+    List<BackendMenuPage> menuPageList = Session["BackendMenuList"] as List<BackendMenuPage>;
+    List<BackendMenuPage> menuPageLevel1List = null;
+
+    if (menuPageList != null)
+    {
+        menuPageLevel1List = menuPageList.Where(x => x.Menu.ParentId == "0").ToList();
+    }
+}
+
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav side-nav">
+        <li class="active">
+            <a href="@Url.Action("Index", "Home")"><i class="fa fa-fw fa-dashboard"></i>首頁</a>
+        </li>
+        @if (menuPageLevel1List != null)
+        { 
+            foreach(var menuPageLevel1 in menuPageLevel1List)
+            {
+                var menuPageLevel2List = menuPageList.Where(x => x.Menu.ParentId == menuPageLevel1.Menu.MenuId);
+                <li>
+                @if(menuPageLevel2List.Count() > 0)
+                {
+                    <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i>@menuPageLevel1.Menu.Name<i class="fa fa-fw fa-caret-down"></i></a>
+                    <ul id="demo" class="collapse">
+                    @foreach (var menuPageLeve2 in menuPageLevel2List)
+                    {
+                        <li><a href="@Url.Action(menuPageLeve2.Page.Action, menuPageLeve2.Page.Controller)">@menuPageLeve2.Menu.Name</a></li>
+                    }
+                    </ul>
+                }
+                else
+                {
+                    <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i>@menuPageLevel1.Menu.Name</a>
+                }
+                </li>
+            }
+        }
+        @*<li>
+            <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
+        </li>
+        <li>
+            <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
+        </li>
+        <li>
+            <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
+        </li>
+        <li>
+            <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
+        </li>
+        <li>
+            <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
+        </li>
+        <li>
+            <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
+            <ul id="demo" class="collapse">
+                <li>
+                    <a href="#">Dropdown Item</a>
+                </li>
+                <li>
+                    <a href="#">Dropdown Item</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
+        </li>
+        <li>
+            <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
+        </li>*@
+    </ul>
+</div>

@@ -1,0 +1,35 @@
+﻿@model IPagedList<Reto.Class.BackendUser>
+
+@if (Model != null && Model.Count() > 0)
+{
+    using (Html.BeginForm("List", "BackendUser", new { }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="dataTables_wrapper" role="grid">
+            <div class="table-header">
+                @ViewBag.Result
+            </div>
+            <table class="table table-striped table-bordered table-hover dataTable">
+                <thead>
+                    <tr role="row">
+                        @*<th class="center" role="columnheader"></th>*@
+                        <th class="center" role="columnheader">姓名</th>
+                    </tr>
+                </thead>
+                <tbody role="alert" aria-live="polite" aria-relevant="all">
+                    @foreach (var row in Model)
+                    {
+                        <tr>
+                            <td class="center">@Html.DisplayFor(m => row.Name)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+}
+else
+{
+    <div class="dataTables_wrapper" role="grid">
+        <h3 class="text-center">查無資料，請重新查詢！</h3>
+    </div>
+}

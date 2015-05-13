@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F5AADC78-EAE1-4ECE-A858-2C04CD54F59F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Reto.Models</RootNamespace>
+    <AssemblyName>Reto.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper.Net4, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\AutoMapperConfig.cs" />
+    <Compile Include="Common\AutoMapperExtension.cs" />
+    <Compile Include="Common\BaseModel.cs" />
+    <Compile Include="DataBase\BackendFileLog.cs">
+      <DependentUpon>Reto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\BackendGroup.cs">
+      <DependentUpon>Reto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\BackendLog.cs">
+      <DependentUpon>Reto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\BackendLoginLog.cs">
+      <DependentUpon>Reto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\BackendMenu.cs">
+      <DependentUpon>Reto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\BackendMenuPage.cs">
+      <DependentUpon>Reto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\BackendPage.cs">
+      <DependentUpon>Reto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\BackendPermission.cs">
+      <DependentUpon>Reto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\BackendPermissionGroup.cs">
+      <DependentUpon>Reto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\BackendPermissionMenu.cs">
+      <DependentUpon>Reto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\BackendUser.cs">
+      <DependentUpon>Reto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\BackendUserGroup.cs">
+      <DependentUpon>Reto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\File.cs">
+      <DependentUpon>Reto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Reto.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reto.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Reto.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Reto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reto.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\RetoSPView.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RetoSPView.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\RetoSPView.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RetoSPView.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\RetoSPView.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RetoSPView.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\sp_GetMenuByUser_Result.cs">
+      <DependentUpon>RetoSPView.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\sp_GetMenuByUser_Result1.cs">
+      <DependentUpon>RetoSPView.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\sp_GetMenuByUser_Result2.cs">
+      <DependentUpon>RetoSPView.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\WebRecord.cs">
+      <DependentUpon>Reto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Factory\IBackendLogFactory.cs" />
+    <Compile Include="Interface\Repository\IBackendGroupRepository.cs" />
+    <Compile Include="Interface\Repository\IBackendMenuPageRepository.cs" />
+    <Compile Include="Interface\Repository\IBackendPageRepository.cs" />
+    <Compile Include="Interface\Repository\IBackendPermissionGroupRepository.cs" />
+    <Compile Include="Interface\Repository\IBackendPermissionMenuRepository.cs" />
+    <Compile Include="Interface\Repository\IBackendPermissionRepository.cs" />
+    <Compile Include="Interface\Repository\IBackendUserGroupRepository.cs" />
+    <Compile Include="Service\Repository\BackendGroupRepository.cs" />
+    <Compile Include="Interface\Repository\IBackendLoginLogRespsitory.cs" />
+    <Compile Include="Interface\Repository\IBackendLogRepository.cs" />
+    <Compile Include="Interface\Repository\IBackendMenuRepository.cs" />
+    <Compile Include="Interface\Repository\IBackendUserRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\Factory\BackendLogFactory.cs" />
+    <Compile Include="Service\Repository\BackendLoginLogRespsitory.cs" />
+    <Compile Include="Service\Repository\BackendLogRepository.cs" />
+    <Compile Include="Service\Repository\BackendMenuPageRepository.cs" />
+    <Compile Include="Service\Repository\BackendMenuRepository.cs" />
+    <Compile Include="Service\Repository\BackendPageRepository.cs" />
+    <Compile Include="Service\Repository\BackendPermissionGroupRepository.cs" />
+    <Compile Include="Service\Repository\BackendPermissionMenuRepository.cs" />
+    <Compile Include="Service\Repository\BackendPermissionRepository.cs" />
+    <Compile Include="Service\Repository\BackendUserGroupRepository.cs" />
+    <Compile Include="Service\Repository\BackendUserRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="DataBase\Reto.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Reto.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataBase\Reto.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Reto.edmx</DependentUpon>
+      <LastGenOutput>Reto.Context.cs</LastGenOutput>
+    </None>
+    <None Include="DataBase\Reto.edmx.diagram">
+      <DependentUpon>Reto.edmx</DependentUpon>
+    </None>
+    <None Include="DataBase\Reto.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Reto.edmx</DependentUpon>
+      <LastGenOutput>Reto.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="DataBase\RetoSPView.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RetoSPView.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataBase\RetoSPView.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RetoSPView.edmx</DependentUpon>
+      <LastGenOutput>RetoSPView.Context.cs</LastGenOutput>
+    </None>
+    <None Include="DataBase\RetoSPView.edmx.diagram">
+      <DependentUpon>RetoSPView.edmx</DependentUpon>
+    </None>
+    <None Include="DataBase\RetoSPView.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RetoSPView.edmx</DependentUpon>
+      <LastGenOutput>RetoSPView.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Reto.Class\Reto.Class.csproj">
+      <Project>{0d01b461-994f-4bc1-b694-89b6764b775b}</Project>
+      <Name>Reto.Class</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

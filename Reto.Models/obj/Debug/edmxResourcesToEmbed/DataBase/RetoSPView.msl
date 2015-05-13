@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RetoModel1StoreContainer" CdmEntityContainer="RetoSPViewEntities">
+    <FunctionImportMapping FunctionImportName="sp_NewBackendGroupId" FunctionName="RetoModel1.Store.sp_NewBackendGroupId" />
+    <FunctionImportMapping FunctionImportName="sp_NewBackendMenuId" FunctionName="RetoModel1.Store.sp_NewBackendMenuId" />
+    <FunctionImportMapping FunctionImportName="sp_NewBackendPageId" FunctionName="RetoModel1.Store.sp_NewBackendPageId" />
+    <FunctionImportMapping FunctionImportName="sp_NewBackendPermissionId" FunctionName="RetoModel1.Store.sp_NewBackendPermissionId" />
+    <FunctionImportMapping FunctionImportName="sp_NewBackendUserId" FunctionName="RetoModel1.Store.sp_NewBackendUserId" />
+    <FunctionImportMapping FunctionImportName="sp_NewFileId" FunctionName="RetoModel1.Store.sp_NewFileId" />
+    <FunctionImportMapping FunctionImportName="sp_GetMenuByUser" FunctionName="RetoModel1.Store.sp_GetMenuByUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RetoModel1.sp_GetMenuByUser_Result2">
+          <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="PageId" ColumnName="PageId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="LinkType" ColumnName="LinkType" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="ActionLink" ColumnName="ActionLink" />
+          <ScalarProperty Name="Controller" ColumnName="Controller" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

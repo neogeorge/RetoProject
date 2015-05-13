@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d86c4f48f389468184ed722e86293fd0" Name="Diagram1">
+        <EntityTypeShape EntityType="RetoModel.BackendFileLog" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RetoModel.BackendGroup" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RetoModel.BackendLog" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RetoModel.BackendLoginLog" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="RetoModel.BackendMenu" Width="1.5" PointX="2.75" PointY="5.75" />
+        <EntityTypeShape EntityType="RetoModel.BackendMenuPage" Width="1.5" PointX="4.75" PointY="5.75" />
+        <EntityTypeShape EntityType="RetoModel.BackendPage" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RetoModel.BackendPermission" Width="1.5" PointX="6.75" PointY="4.75" />
+        <EntityTypeShape EntityType="RetoModel.BackendPermissionGroup" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RetoModel.BackendPermissionMenu" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="RetoModel.BackendUser" Width="1.5" PointX="4.75" PointY="8.75" />
+        <EntityTypeShape EntityType="RetoModel.BackendUserGroup" Width="1.5" PointX="8.75" PointY="6.75" />
+        <EntityTypeShape EntityType="RetoModel.File" Width="1.5" PointX="6.75" PointY="9.75" />
+        <EntityTypeShape EntityType="RetoModel.WebRecord" Width="1.5" PointX="8.75" PointY="9.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

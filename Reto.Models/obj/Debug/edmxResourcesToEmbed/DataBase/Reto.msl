@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RetoModelStoreContainer" CdmEntityContainer="RetoEntities">
+    <EntitySetMapping Name="BackendFileLog">
+      <EntityTypeMapping TypeName="RetoModel.BackendFileLog">
+        <MappingFragment StoreEntitySet="BackendFileLog">
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ClientIP" ColumnName="ClientIP" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Controller" ColumnName="Controller" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Event" ColumnName="Event" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="ActionLink" ColumnName="ActionLink" />
+          <ScalarProperty Name="FileLogId" ColumnName="FileLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BackendGroup">
+      <EntityTypeMapping TypeName="RetoModel.BackendGroup">
+        <MappingFragment StoreEntitySet="BackendGroup">
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BackendLog">
+      <EntityTypeMapping TypeName="RetoModel.BackendLog">
+        <MappingFragment StoreEntitySet="BackendLog">
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ClientIP" ColumnName="ClientIP" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Controller" ColumnName="Controller" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Paramer" ColumnName="Paramer" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Event" ColumnName="Event" />
+          <ScalarProperty Name="FunctionName" ColumnName="FunctionName" />
+          <ScalarProperty Name="ActionLink" ColumnName="ActionLink" />
+          <ScalarProperty Name="LogId" ColumnName="LogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BackendLoginLog">
+      <EntityTypeMapping TypeName="RetoModel.BackendLoginLog">
+        <MappingFragment StoreEntitySet="BackendLoginLog">
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ClientIP" ColumnName="ClientIP" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="LoginLogId" ColumnName="LoginLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BackendMenu">
+      <EntityTypeMapping TypeName="RetoModel.BackendMenu">
+        <MappingFragment StoreEntitySet="BackendMenu">
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="LinkType" ColumnName="LinkType" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BackendMenuPage">
+      <EntityTypeMapping TypeName="RetoModel.BackendMenuPage">
+        <MappingFragment StoreEntitySet="BackendMenuPage">
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="PageId" ColumnName="PageId" />
+          <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+          <ScalarProperty Name="MenuPageId" ColumnName="MenuPageId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BackendPage">
+      <EntityTypeMapping TypeName="RetoModel.BackendPage">
+        <MappingFragment StoreEntitySet="BackendPage">
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Controller" ColumnName="Controller" />
+          <ScalarProperty Name="ActionLink" ColumnName="ActionLink" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PageId" ColumnName="PageId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BackendPermission">
+      <EntityTypeMapping TypeName="RetoModel.BackendPermission">
+        <MappingFragment StoreEntitySet="BackendPermission">
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PermissionId" ColumnName="PermissionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BackendPermissionGroup">
+      <EntityTypeMapping TypeName="RetoModel.BackendPermissionGroup">
+        <MappingFragment StoreEntitySet="BackendPermissionGroup">
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="PermissionId" ColumnName="PermissionId" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="PermissionGroupId" ColumnName="PermissionGroupId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BackendPermissionMenu">
+      <EntityTypeMapping TypeName="RetoModel.BackendPermissionMenu">
+        <MappingFragment StoreEntitySet="BackendPermissionMenu">
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="PermissionId" ColumnName="PermissionId" />
+          <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+          <ScalarProperty Name="PermissionMenuId" ColumnName="PermissionMenuId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BackendUser">
+      <EntityTypeMapping TypeName="RetoModel.BackendUser">
+        <MappingFragment StoreEntitySet="BackendUser">
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserLoginId" ColumnName="UserLoginId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BackendUserGroup">
+      <EntityTypeMapping TypeName="RetoModel.BackendUserGroup">
+        <MappingFragment StoreEntitySet="BackendUserGroup">
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserGroupId" ColumnName="UserGroupId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="File">
+      <EntityTypeMapping TypeName="RetoModel.File">
+        <MappingFragment StoreEntitySet="File">
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileId" ColumnName="FileId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WebRecord">
+      <EntityTypeMapping TypeName="RetoModel.WebRecord">
+        <MappingFragment StoreEntitySet="WebRecord">
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ClientIP" ColumnName="ClientIP" />
+          <ScalarProperty Name="PostData" ColumnName="PostData" />
+          <ScalarProperty Name="ActionLink" ColumnName="ActionLink" />
+          <ScalarProperty Name="WebRecordId" ColumnName="WebRecordId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RetoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BackendFileLog">
+    <Key>
+      <PropertyRef Name="FileLogId" />
+    </Key>
+    <Property Name="FileLogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActionLink" Type="nvarchar" MaxLength="250" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Extension" Type="varchar" MaxLength="10" />
+    <Property Name="Event" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="Message" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Controller" Type="varchar" MaxLength="50" />
+    <Property Name="Action" Type="varchar" MaxLength="50" />
+    <Property Name="ClientIP" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BackendGroup">
+    <Key>
+      <PropertyRef Name="GroupId" />
+    </Key>
+    <Property Name="GroupId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="BackendLog">
+    <Key>
+      <PropertyRef Name="LogId" />
+    </Key>
+    <Property Name="LogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActionLink" Type="nvarchar" MaxLength="250" />
+    <Property Name="FunctionName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Event" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="Paramer" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Message" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Controller" Type="varchar" MaxLength="50" />
+    <Property Name="Action" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="ClientIP" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BackendLoginLog">
+    <Key>
+      <PropertyRef Name="LoginLogId" />
+    </Key>
+    <Property Name="LoginLogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="ClientIP" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BackendMenu">
+    <Key>
+      <PropertyRef Name="MenuId" />
+    </Key>
+    <Property Name="MenuId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ParentId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Level" Type="tinyint" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LinkType" Type="tinyint" Nullable="false" />
+    <Property Name="Sort" Type="tinyint" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="BackendMenuPage">
+    <Key>
+      <PropertyRef Name="MenuPageId" />
+    </Key>
+    <Property Name="MenuPageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="PageId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BackendPage">
+    <Key>
+      <PropertyRef Name="PageId" />
+    </Key>
+    <Property Name="PageId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="ActionLink" Type="nvarchar" MaxLength="250" />
+    <Property Name="Controller" Type="varchar" MaxLength="50" />
+    <Property Name="Action" Type="varchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="BackendPermission">
+    <Key>
+      <PropertyRef Name="PermissionId" />
+    </Key>
+    <Property Name="PermissionId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="BackendPermissionGroup">
+    <Key>
+      <PropertyRef Name="PermissionGroupId" />
+    </Key>
+    <Property Name="PermissionGroupId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="PermissionId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BackendPermissionMenu">
+    <Key>
+      <PropertyRef Name="PermissionMenuId" />
+    </Key>
+    <Property Name="PermissionMenuId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="PermissionId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="BackendUser">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="UserLoginId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Sex" Type="bit" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="BackendUserGroup">
+    <Key>
+      <PropertyRef Name="UserGroupId" />
+    </Key>
+    <Property Name="UserGroupId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="GroupId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="File">
+    <Key>
+      <PropertyRef Name="FileId" />
+    </Key>
+    <Property Name="FileId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Extension" Type="varchar" MaxLength="10" />
+    <Property Name="Description" Type="nvarchar" MaxLength="2000" />
+    <Property Name="FileType" Type="tinyint" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="varbinary" MaxLength="20" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="varbinary" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="WebRecord">
+    <Key>
+      <PropertyRef Name="WebRecordId" />
+    </Key>
+    <Property Name="WebRecordId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ActionLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="PostData" Type="xml" />
+    <Property Name="ClientIP" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="RetoModelStoreContainer">
+    <EntitySet Name="BackendFileLog" EntityType="Self.BackendFileLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BackendGroup" EntityType="Self.BackendGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BackendLog" EntityType="Self.BackendLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BackendLoginLog" EntityType="Self.BackendLoginLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BackendMenu" EntityType="Self.BackendMenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BackendMenuPage" EntityType="Self.BackendMenuPage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BackendPage" EntityType="Self.BackendPage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BackendPermission" EntityType="Self.BackendPermission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BackendPermissionGroup" EntityType="Self.BackendPermissionGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BackendPermissionMenu" EntityType="Self.BackendPermissionMenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BackendUser" EntityType="Self.BackendUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BackendUserGroup" EntityType="Self.BackendUserGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="File" EntityType="Self.File" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WebRecord" EntityType="Self.WebRecord" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

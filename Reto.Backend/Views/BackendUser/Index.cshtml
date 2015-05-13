@@ -1,0 +1,72 @@
+﻿@model IPagedList<Reto.Class.BackendUser>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("List", "BackendUser", new { }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">查詢</h3>
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">姓名:</label>
+                <div class="col-sm-10">
+                    @*<input type="email" class="form-control" id="inputEmail3" placeholder="Email">*@
+                    @Html.TextBox("Name", null, new { @class = "form-control", @id = "inputEmail3", @placeholder = "請輸入姓名" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="ddlSex" class="col-sm-2 control-label">姓別:</label>
+                <div class="col-sm-10">
+                    <select id="Sex" class="form-control">
+                        <option value="">請選擇</option>
+                        <option value="1">男</option>
+                        <option value="0">女</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">是否鎖定:</label>
+                <div class="col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">是否刪除:</label>
+                <div class="col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            @*<div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                    </div>
+                </div>*@
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">查詢</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div id="grid-table" class="table-responsive">
+            @Html.Partial("_List", Model)
+        </div>
+    </div>
+</div>
