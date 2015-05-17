@@ -10,3 +10,15 @@ D:\NeoWorkProject\Reto\Reto.Class\bin\Debug\zh-Hant\EntityFramework.SqlServer.re
 D:\NeoWorkProject\Reto\Reto.Class\obj\Debug\Reto.Class.dll
 D:\NeoWorkProject\Reto\Reto.Class\obj\Debug\Reto.Class.pdb
 D:\NeoWorkProject\Reto\Reto.Class\obj\Debug\Reto.Class.csprojResolveAssemblyReference.cache
+C:\Users\NeoNB\Documents\GitHub\RetoProject\Reto.Class\bin\Debug\Reto.Class.dll.config
+C:\Users\NeoNB\Documents\GitHub\RetoProject\Reto.Class\bin\Debug\Reto.Class.dll
+C:\Users\NeoNB\Documents\GitHub\RetoProject\Reto.Class\bin\Debug\Reto.Class.pdb
+C:\Users\NeoNB\Documents\GitHub\RetoProject\Reto.Class\bin\Debug\EntityFramework.dll
+C:\Users\NeoNB\Documents\GitHub\RetoProject\Reto.Class\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\NeoNB\Documents\GitHub\RetoProject\Reto.Class\bin\Debug\EntityFramework.xml
+C:\Users\NeoNB\Documents\GitHub\RetoProject\Reto.Class\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\NeoNB\Documents\GitHub\RetoProject\Reto.Class\bin\Debug\zh-Hant\EntityFramework.resources.dll
+C:\Users\NeoNB\Documents\GitHub\RetoProject\Reto.Class\bin\Debug\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\NeoNB\Documents\GitHub\RetoProject\Reto.Class\obj\Debug\Reto.Class.csprojResolveAssemblyReference.cache
+C:\Users\NeoNB\Documents\GitHub\RetoProject\Reto.Class\obj\Debug\Reto.Class.dll
+C:\Users\NeoNB\Documents\GitHub\RetoProject\Reto.Class\obj\Debug\Reto.Class.pdb

@@ -38,7 +38,7 @@ namespace Reto.Backend.Controllers
         [BackendAuthorize]
         public ActionResult Index(BackendUser model, int? page = 1)
         {
-            List(model, page);
+            this.List(model, page);
             return View();
         }
 
@@ -66,7 +66,29 @@ namespace Reto.Backend.Controllers
             }
             catch(Exception ex)
             {
-                throw;
+                throw ex;
+            }
+        }
+
+        [HttpGet]
+        [BackendAuthorize]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [BackendAuthorize]
+        public ActionResult Create(BackendUser model)
+        {
+            try
+            {
+                userRepo.Add(ref model);
+                return View();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
     }

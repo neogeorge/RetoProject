@@ -11,19 +11,36 @@
             <table class="table table-striped table-bordered table-hover dataTable">
                 <thead>
                     <tr role="row">
-                        @*<th class="center" role="columnheader"></th>*@
+                        <th class="center" role="columnheader">帳號</th>
                         <th class="center" role="columnheader">姓名</th>
+                        <th class="center" role="columnheader"></th>
                     </tr>
                 </thead>
                 <tbody role="alert" aria-live="polite" aria-relevant="all">
                     @foreach (var row in Model)
                     {
                         <tr>
+                            <td class="center">@Html.ActionLink(row.UserLoginId, "Update")</td>
                             <td class="center">@Html.DisplayFor(m => row.Name)</td>
+                            <td class="center"></td>
                         </tr>
                     }
                 </tbody>
             </table>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="dataTables_info">@Model.ItemStart - @Model.ItemEnd 共 @Model.TotalItemCount 筆</div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="dataTables_paginate paging_bootstrap">
+                        @Html.Pager(Model.PageSize, Model.PageNumber, Model.TotalItemCount).Options(
+                        o => o.Action("List")
+                        .DisplayTemplate("_AcePagination")
+                        .MaxNrOfPages(10)
+                        .AlwaysAddFirstPageNumber())
+                    </div>
+                </div>
+            </div>
         </div>
     }
 }

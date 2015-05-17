@@ -199,6 +199,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\PaginationHelper.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -311,6 +312,7 @@
     <Content Include="Views\Shared\_Menu.cshtml" />
     <Content Include="Views\BackendUser\Index.cshtml" />
     <Content Include="Views\BackendUser\_List.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplate\_AcePagination.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -333,6 +335,9 @@
       <Project>{f5aadc78-eae1-4ece-a858-2c04cd54f59f}</Project>
       <Name>Reto.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

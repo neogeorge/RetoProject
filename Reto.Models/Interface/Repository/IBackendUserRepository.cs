@@ -20,6 +20,13 @@ namespace Reto.Models
         BackendUser GetUser(string account, string password, bool IsEmail);
 
         /// <summary>
+        /// 依帳號取得使用者資料
+        /// </summary>
+        /// <param name="account">帳號</param>
+        /// <returns></returns>
+        BackendUser GetUser(string account);
+
+        /// <summary>
         /// 依條件取得使用者資料列
         /// </summary>
         /// <param name="search"></param>
@@ -34,6 +41,24 @@ namespace Reto.Models
         /// </summary>
         /// <param name="user">User Class</param>
         void Add(ref BackendUser user);
+        #endregion
+
+        #region Update
+        /// <summary>
+        /// 修改使用者
+        /// </summary>
+        /// <param name="user">User Class</param>
+        /// <returns></returns>
+        bool Update(BackendUser user);
+        #endregion
+
+        #region Delete
+        /// <summary>
+        /// 刪除使用者
+        /// </summary>
+        /// <param name="userLoginId">帳號</param>
+        /// <returns></returns>
+        bool Delete(string userLoginId);
         #endregion
     }
 }

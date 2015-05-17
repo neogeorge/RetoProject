@@ -16,30 +16,34 @@ namespace Reto.Class
         /// 登入帳號
         /// </summary>
         [Required(ErrorMessage = "登入帳號不可為空"), StringLength(30)]
+        [Display(Name = "登入帳號")]
         public string UserLoginId { get; set; }
 
         /// <summary>
         /// 電子郵件
         /// </summary>
         [Required(ErrorMessage = "電子郵件不可為空"), StringLength(150)]
+        [Display(Name = "電子郵件")]
         public string Email { get; set; }
 
         /// <summary>
         /// 密碼
         /// </summary>
         [Required(ErrorMessage = "密碼不可為空"), StringLength(150)]
+        [Display(Name = "密碼")]
         public string Password { get; set; }
 
         /// <summary>
         /// 會員名稱
         /// </summary>
         [Required(ErrorMessage = "會員名稱不可為空"), StringLength(30)]
+        [Display(Name = "會員名稱")]
         public string Name { get; set; }
 
         /// <summary>
         /// 性別
         /// </summary>
-        //[Required]
+        [Display(Name = "性別")]
         public Boolean Sex { get; set; }
 
         /// <summary>
@@ -50,12 +54,14 @@ namespace Reto.Class
         /// <summary>
         /// 是否鎖住
         /// </summary>
+        [Display(Name = "是否鎖住")]
         public Boolean IsLock { get; set; }
 
         /// <summary>
         /// 是否刪除
         /// </summary>
         //[Required]
+        [Display(Name = "是否刪除")]
         public Boolean IsDeleted { get; set; }
 
         /// <summary>

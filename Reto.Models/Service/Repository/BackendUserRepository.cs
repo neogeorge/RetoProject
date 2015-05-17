@@ -77,6 +77,40 @@ namespace Reto.Models
         }
 
         /// <summary>
+        /// 依帳號取得使用者資料
+        /// </summary>
+        /// <param name="account">帳號</param>
+        /// <returns></returns>
+        public BackendUser GetUser(string account)
+        {
+            string desc = @"依帳號取得使用者資料";
+            string functionName = @"BackendUserRepository/GetUser";
+
+            try
+            {
+                var query = RetoDB.BackendUser.FirstOrDefault(x => x.UserLoginId == account);
+
+                this.logInfo.CreateUser = query.UserLoginId;
+                logFactory.Success(this.logInfo, functionName, desc);
+                return Mapper.Map<BackendUser>(query);
+            }
+            catch (Exception ex)
+            {
+                //若是Entity error則直接回傳Entity error message
+                if (ex is EntityException)
+                {
+                    logFactory.Error(this.logInfo, ex.InnerException, functionName, desc);
+                    throw ex.InnerException;
+                }
+                else
+                {
+                    logFactory.Error(this.logInfo, ex, functionName, desc);
+                    throw ex; //若error則直接回傳error message
+                }
+            }
+        }
+
+        /// <summary>
         /// 依條件取得使用者資料列
         /// </summary>
         /// <param name="search"></param>
@@ -172,9 +206,86 @@ namespace Reto.Models
         #endregion
 
         #region Update
+        /// <summary>
+        /// 修改使用者
+        /// </summary>
+        /// <param name="user">User Class</param>
+        /// <returns></returns>
+        public bool Update(BackendUser user)
+        {
+            string desc = @"修改使用者";
+            string functionName = @"BackendUserRepository/Update";
+
+            try
+            {
+                var query = RetoDB.BackendUser.FirstOrDefault(x=>x.UserLoginId == user.UserLoginId);
+                int count = 0;
+                if(query != null)
+                {
+                    query.Name = user.Name;
+                    query.Sex = user.Sex;
+                    query.Email = user.Email;
+                    query.IsLock = user.IsLock;
+                    query.UpdateUser = query.UpdateUser;
+                    query.UpdateDate = DateTime.Now;
+
+                    count = RetoDB.SaveChanges();
+                }
+
+                logFactory.Success(this.logInfo, functionName, desc);
+                return (count > 0);
+            }
+            catch (Exception ex)
+            {
+                //若是Entity error則直接回傳Entity error message
+                if (ex is EntityException)
+                {
+                    logFactory.Error(this.logInfo, ex.InnerException, functionName, desc);
+                    throw ex.InnerException;
+                }
+                else
+                {
+                    logFactory.Error(this.logInfo, ex, functionName, desc);
+                    throw ex; //若error則直接回傳error message
+                }
+            }
+        }
         #endregion
 
         #region Delete
+        /// <summary>
+        /// 刪除使用者
+        /// </summary>
+        /// <param name="userLoginId">帳號</param>
+        /// <returns></returns>
+        public bool Delete(string userLoginId)
+        {
+            string desc = @"刪除使用者";
+            string functionName = @"BackendUserRepository/Delete";
+
+            try
+            {
+                var query = RetoDB.BackendUser.FirstOrDefault(x => x.UserLoginId == userLoginId);
+                RetoDB.BackendUser.Remove(query);
+                int count = RetoDB.SaveChanges();
+                logFactory.Success(this.logInfo, functionName, desc);
+                return (count > 0);
+            }
+            catch (Exception ex)
+            {
+                //若是Entity error則直接回傳Entity error message
+                if (ex is EntityException)
+                {
+                    logFactory.Error(this.logInfo, ex.InnerException, functionName, desc);
+                    throw ex.InnerException;
+                }
+                else
+                {
+                    logFactory.Error(this.logInfo, ex, functionName, desc);
+                    throw ex; //若error則直接回傳error message
+                }
+            }
+        }
         #endregion
     }
 }
